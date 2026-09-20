@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Work Experience — Muhammad Moiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="page">
+
+    <!-- Header -->
+    <header id="header">
+
+        <div id="name">
+            <h1>Muhammad Moiz</h1>
+            <p>Computer Science Researcher &middot; Data Scientist &middot; Builder</p>
+        </div>
+
+        <div id="header-links">
+            <a href="mailto:moizmasood2003@gmail.com">Email</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/moiz56">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://www.linkedin.com/in/muhammad-moiz-454318228/">LinkedIn</a>
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <nav id="navigation">
+
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="work.html" class="selected">Work Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="about.html">About</a>
+
+    </nav>
+
+
+    <!-- Main layout -->
+    <div id="main">
+
+        <!-- Content -->
+        <div id="content">
+
+            <h2>Data Scientist - Elunic AG</h2>
+
+            <p>
+                January 2026 &ndash; Present
+            </p>
+
+
+            <p>
+                <strong>What I do and What I Learnt</strong>
+            </p>
+            <p>
+                I work on <strong>industrial defect detection using computer
+                vision</strong>. Customers send us images of their components
+                containing defects, and my work runs from that raw data to a
+                deployed model and the conversation with the customer about
+                what it can and cannot do.
+            </p>
+
+            <ul>
+
+                <li>
+                    I coordinate and lead the annotation process, resolving
+                    inconsistencies between annotators and defining the
+                    <strong>defect scope and edge cases</strong> before
+                    labelling starts. What counts as a defect, and how
+                    borderline cases are treated, decides what the model can
+                    learn at all.
+                </li>
+
+                <li>
+                    After annotation we split the data into training and test
+                    sets while preventing data leakage. If the same physical
+                    component is photographed from several angles, those
+                    images cannot be split across train and test, because the
+                    model would be evaluated on parts it had already seen.
+                    Splitting at the <strong>component level rather than the
+                    image level</strong> changed how I read evaluation
+                    results.
+                </li>
+
+                <li>
+                    I have worked on two kinds of teams. The first runs
+                    <strong>proof-of-concept projects</strong>, where we
+                    determine whether a computer vision solution is viable for
+                    a customer. Through this I learned how to evaluate
+                    different approaches, how to choose and interpret the
+                    right metrics, and how to <strong>present technical
+                    results professionally</strong> to customers.
+                </li>
+
+                <li>
+                    The second kind handles <strong>follow-up projects</strong>,
+                    where models are retrained and improved as new data
+                    arrives. I developed a <strong>retraining pipeline</strong>
+                    and learned to benchmark model iterations against a curated
+                    <strong>golden set</strong>, so versions are compared
+                    consistently instead of against whatever test split
+                    happened to exist.
+                </li>
+
+                <li>
+                    I learned to <strong>document results</strong> properly:
+                    what changed between runs, which configuration produced
+                    which numbers, and why a version was accepted or rejected,
+                    so a result can still be traced weeks later.
+                </li>
+
+            </ul>
+
+
+            <h3>Tech Stack and Techniques Used</h3>
+
+            <ul>
+
+                <li>
+                    The main techniques I have worked with are
+                    <strong>image tiling</strong>, <strong>synthetic defect
+                    generation</strong>, <strong>oversampling</strong>, and
+                    <strong>hyperparameter tuning</strong>.
+                </li>
+
+                <li>
+                    I mostly fine-tune <strong>YOLO</strong> and
+                    <strong>DETR</strong> models for both object detection and
+                    segmentation.
+                </li>
+
+                <li>
+                    The projects have covered PCB boards, industrial rings,
+                    microscopic imagery, dental imagery, pens, and
+                    Cardiobridge, which span very different scales, lighting
+                    conditions, and definitions of what a defect looks like.
+                </li>
+
+                <li>
+                    I also contributed to <strong>AIDA</strong>, an internal
+                    Slack-based development agent, working on
+                    <strong>LLM-powered tool-calling workflows</strong>
+                    intended to reduce development time.
+                </li>
+
+                <li>
+                    I work remotely with data scientists and engineers from
+                    multiple countries, take part in weekly technical
+                    discussions about improving our approaches, and develop on
+                    remote environments and VMs over SSH.
+                </li>
+
+            </ul>
+
+
+            <h2>Earlier Positions</h2>
+
+            <div class="publication">
+
+                <h3>ML and Automation Intern &mdash; Modern Intelligent Solutions</h3>
+
+                <p>
+                    July 2025 &ndash; Sept 2025 &middot; Islamabad
+                </p>
+
+                <ul>
+
+                    <li>
+                        Built automation workflows for cold outreach, scraping
+                        leads from the web and processing them.
+                    </li>
+
+                    <li>
+                        Sent out cold emails generated with an LLM for
+                        outreach.
+                    </li>
+
+                    <li>
+                        Worked on cold calling agent development, where a
+                        voice agent would take a call, carry a conversation,
+                        log the responses, and highlight potential leads.
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+
+            <h3>Current Role</h3>
+
+            <p>
+                <strong>Data Scientist</strong><br>
+                Elunic AG<br>
+                Since January 2026 &middot; Remote
+            </p>
+
+
+            <h3>What I Do</h3>
+
+            <ul>
+                <li>Annotation scoping and review</li>
+                <li>Object detection and segmentation</li>
+                <li>Retraining pipelines</li>
+                <li>Golden-set benchmarking</li>
+                <li>Results documentation</li>
+                <li>Customer presentations</li>
+            </ul>
+
+
+            <h3>Stack</h3>
+
+            <ul>
+                <li>PyTorch</li>
+                <li>YOLO, DETR</li>
+                <li>OpenCV</li>
+                <li>Docker, Azure</li>
+                <li>Linux, SSH, remote VMs</li>
+                <li>Git, CI/CD</li>
+            </ul>
+
+
+            <h3>Domains</h3>
+
+            <ul>
+                <li>PCB boards</li>
+                <li>Industrial rings</li>
+                <li>Microscopic imagery</li>
+                <li>Dental imagery</li>
+                <li>Pens</li>
+                <li>Cardiobridge</li>
+            </ul>
+
+
+            <h3>Elsewhere</h3>
+
+            <ul>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="cv.pdf" target="_blank">CV</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <p>
+            Last updated September 2026.
+            &nbsp;|&nbsp;
+            © Muhammad Moiz
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

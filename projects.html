@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Projects — Muhammad Moiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="page">
+
+    <!-- Header -->
+    <header id="header">
+
+        <div id="name">
+            <h1>Muhammad Moiz</h1>
+            <p>Computer Science Researcher &middot; Data Scientist &middot; Builder</p>
+        </div>
+
+        <div id="header-links">
+            <a href="mailto:moizmasood2003@gmail.com">Email</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/moiz56">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://www.linkedin.com/in/muhammad-moiz-454318228/">LinkedIn</a>
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <nav id="navigation">
+
+        <a href="index.html">Home</a>
+        <a href="research.html">Research</a>
+        <a href="work.html">Work Experience</a>
+        <a href="projects.html" class="selected">Projects</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="about.html">About</a>
+
+    </nav>
+
+
+    <!-- Main layout -->
+    <div id="main">
+
+        <!-- Content -->
+        <div id="content">
+
+            <h2>Projects</h2>
+
+            <p>
+                Things I have built outside of my research, mostly to learn
+                something specific by getting it working end to end. Research
+                projects live on the <a href="research.html">research
+                page</a>.
+            </p>
+
+
+            <div class="publication">
+
+                <h3><a href="https://github.com/moiz56/rag_mcq_generator">EduRAG</a></h3>
+
+                <p>
+                    LlamaIndex, FAISS, FastAPI, LangGraph, Qwen 0.5B
+                </p>
+
+                <p>
+                    A retrieval-augmented question answering system for study
+                    material. It ingests textbooks, PDFs, DOCX files, and web
+                    articles into a FAISS index and serves source-grounded
+                    answers through a FastAPI backend, so every answer points
+                    back at the passage it came from.
+                </p>
+
+                <p>
+                    On top of retrieval, a LangGraph workflow driven by Qwen
+                    0.5B generates multiple-choice questions from retrieved
+                    passages, then validates and cites them, regenerating any
+                    question that fails its own checks. The interesting part
+                    was getting a small model to be reliable by structuring
+                    the workflow around it rather than by scaling it up.
+                </p>
+
+            </div>
+
+
+            <div class="publication">
+
+                <h3><a href="https://github.com/moiz56/AI-Based-Crowd-Counting">AI-Driven Crowd Counting</a></h3>
+
+                <p>
+                    PyTorch, CNNs, Density Estimation
+                </p>
+
+                <p>
+                    A density-estimation network for counting people in dense
+                    scenes, combining a VGG-16 backbone with
+                    Squeeze-and-Excitation blocks, multi-scale context
+                    modules, and dilated convolutions to handle the wide
+                    variation in head size across a single frame.
+                </p>
+
+                <p>
+                    On ShanghaiTech Part B it reaches
+                    <strong>10.38 MAE</strong> and 16.2 MSE, ahead of MCNN
+                    (26.4), Switching CNN (21.6), and CSRNet (10.6), at 0.15
+                    seconds per image.
+                </p>
+
+            </div>
+
+             <div class="publication">
+
+                <h3><a href="https://github.com/moiz56/image-format-converter">Image Format COnverter</a></h3>
+
+                <div class="publication">
+
+    <p>
+        Python, Watchdog, Pillow, Pytest
+    </p>
+
+    <p>
+        Sometimes its just annoying to go to a file converter online to convert a file from a png to jpg or
+        a .webp to a .jpg. A simple too I built where a file watcher looks over your folder recursively and anytime
+        an extension is changed it converts the format to the desired format in the background
+    </p>
+
+</div>
+
+            </div>
+
+
+            <div class="publication">
+
+                <h3>TCP File Transfer Utility</a></h3>
+
+                <p>
+                    C, Python, Tkinter, POSIX Sockets
+                </p>
+
+                <p>
+                    A file transfer client and server written in C on top of
+                    Berkeley sockets, built to understand what reliable
+                    streaming actually requires once you are below the
+                    library level.
+                </p>
+
+                <p>
+                    A Tkinter front end drives the two processes using
+                    fork(), pipe(), and dup2() to wire up file descriptors
+                    between them, which turned out to be a better lesson in
+                    process control than the networking itself.
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+
+            <h3>Built With</h3>
+
+            <ul>
+                <li>Python, C/C++</li>
+                <li>PyTorch, TensorFlow</li>
+                <li>Hugging Face, OpenCV</li>
+                <li>LangChain, LangGraph</li>
+                <li>FastAPI, Docker</li>
+                <li>Next.js, TypeScript</li>
+            </ul>
+
+
+            <h3>Code</h3>
+
+            <p>
+                Most of these live on GitHub, along with smaller experiments
+                that never grew into anything.
+            </p>
+
+            <p>
+                <a href="https://github.com/moiz56">github.com/moiz56</a>
+            </p>
+
+
+            <h3>Elsewhere</h3>
+
+            <ul>
+                <li><a href="research.html">Research</a></li>
+                <li><a href="cv.pdf" target="_blank">CV</a></li>
+                <li><a href="mailto:moizmasood2003@gmail.com">Email</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <p>
+            Last updated September 2026.
+            &nbsp;|&nbsp;
+            © Muhammad Moiz
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

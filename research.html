@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Research — Muhammad Moiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div id="page">
+
+    <!-- Header -->
+    <header id="header">
+
+        <div id="name">
+            <h1>Muhammad Moiz</h1>
+            <p>Computer Science Researcher &middot; Data Scientist &middot; Builder</p>
+        </div>
+
+        <div id="header-links">
+            <a href="mailto:moizmasood2003@gmail.com">Email</a>
+            &nbsp;|&nbsp;
+            <a href="https://github.com/moiz56">GitHub</a>
+            &nbsp;|&nbsp;
+            <a href="https://www.linkedin.com/in/muhammad-moiz-454318228/">LinkedIn</a>
+        </div>
+
+    </header>
+
+
+    <!-- Navigation -->
+    <nav id="navigation">
+
+        <a href="index.html">Home</a>
+        <a href="research.html" class="selected">Research</a>
+        <a href="work.html">Work Experience</a>
+        <a href="projects.html">Projects</a>
+        <a href="cv.pdf" target="_blank">CV</a>
+        <a href="about.html">About</a>
+
+    </nav>
+
+
+    <!-- Main layout -->
+    <div id="main">
+
+        <!-- Content -->
+        <div id="content">
+
+            <h2>Overview</h2>
+
+            <p>
+                My research sits at the intersection of
+                <strong>deep learning</strong> and <strong>medical image
+                analysis</strong>. I work on segmentation and prediction tasks
+                in cardiac MRI, where scans are noisy, annotated data is
+                scarce, and any method that hopes to be used has to run inside
+                a clinical workflow rather than a benchmark.
+            </p>
+
+            <p>
+                Most of my work is done at the <em>Deep Learning Lab</em> at
+                NUST, supervised by <a href="#">Dr. Faisal Shafait</a> and
+                <a href="#">Dr. Momina Moetesum</a>, in collaboration with
+                cardiovascular MRI clinicians.
+            </p>
+
+
+            <h2>Automated Frequency Offset Selection for 3T Cardiac bSSFP MRI</h2>
+
+            <p>
+                Balanced SSFP imaging at 3T suffers from banding artifacts
+                whose position depends on the frequency offset chosen at the
+                scanner. Today a radiographer finds that offset by acquiring
+                scout images and inspecting them by hand. This project asks
+                whether the choice can be made automatically.
+            </p>
+
+            <p>
+                I built a pipeline that first locates the left ventricle in
+                low-quality scout images, using the UK Biobank and ACDC
+                datasets for transfer learning and reaching
+                <strong>81.7% IoU</strong>. A vision transformer then predicts
+                the appropriate offset from the localized region, achieving
+                <strong>80.8% Top-1</strong> and <strong>88.5% Top-3</strong>
+                accuracy on a 26-patient clinical dataset under leave-one-out
+                cross-validation.
+            </p>
+
+            <p>
+                I compared the approach against CNN, Bi-LSTM, Fourier-based,
+                and foundation-model baselines, and measured what deployment
+                would actually cost: <strong>34.9 seconds per study on CPU
+                alone</strong>, with no GPU required at the scanner.
+            </p>
+
+            <figure class="figure">
+
+                <img src="pipeline.png"
+                     alt="Pipeline diagram: scout stack, preprocessing, left
+                          ventricle segmentation, ViT classification, ranking">
+
+                <figcaption>
+                    End-to-end pipeline for automated frequency-offset
+                    selection. Data flows from DICOM scout series through
+                    preprocessing, left-ventricular segmentation (Attention
+                    U-Net), and Vision Transformer classification to predict
+                    optimal frequency offset.
+                </figcaption>
+
+            </figure>
+
+
+            <h2>2D vs. 3D Architectures for Left Ventricle Segmentation</h2>
+
+            <p>
+                Cardiac MRI volumes are anisotropic: in-plane resolution is
+                far finer than slice thickness. 3D models are the intuitive
+                choice for volumetric data, but it is not obvious that they
+                should win when a third of the signal is missing.
+            </p>
+
+            <p>
+                I built a shared preprocessing and training pipeline for the
+                EMIDEC dataset and evaluated five segmentation architectures
+                in both 2D and 3D settings, comparing them on segmentation
+                accuracy, boundary error, volume difference, computational
+                cost, and model size. <strong>SegResNet2D</strong> reached a
+                Dice score of <strong>0.929</strong> and an HD95 of
+                <strong>0.67 mm</strong>, holding its own against the 3D
+                variants at a fraction of the cost.
+            </p>
+
+            <p>
+                The work analyses when each family is the right choice under
+                different acquisition settings
+            </p>
+
+
+            <h2>Earlier Work</h2>
+
+            <p>
+                At the <em>Optical Networks and Technologies Lab</em> at NUST,
+                I worked on time-series forecasting for networking and
+                communication systems. I taught myself recurrent architectures
+                from scratch and built and compared RNN, LSTM, and GRU models
+                against attention-based and generative approaches.
+            </p>
+
+
+            <h2>Publications</h2>
+
+            <div class="publication">
+
+                <h3>
+                    <a href="ISBI_Target.pdf">Comparing 2D and 3D CNN Architectures for Left
+                    Ventricle Segmentation in Cardiac Magnetic Resonance
+                    Imaging</a>
+                </h3>
+
+                <p>
+                    Muhammad Moiz, Abdul Rehman, Abdul Rehman, Muhammad Usman,
+                    Momina Moetesum, Faisal Shafait
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <!-- Sidebar -->
+        <aside id="sidebar">
+
+            <h3>Research Interests</h3>
+
+            <ul>
+                <li>Medical Image Analysis</li>
+                <li>Semantic Segmentation</li>
+                <li>Vision Transformers</li>
+                <li>Transfer Learning</li>
+                <li>Applied ML Systems</li>
+            </ul>
+
+
+            <h3>Affiliations</h3>
+
+            <p>
+                <strong>Deep Learning Lab</strong><br>
+                NUST, Islamabad<br>
+                Research Assistant, 2025&ndash;2026
+            </p>
+
+            <p>
+                <strong>Optical Networks and<br>Technologies Lab</strong><br>
+                NUST, Islamabad<br>
+                Research Intern, 2024
+            </p>
+
+
+            <h3>Collaborators</h3>
+
+            <ul>
+                <li><a href="https://scholar.google.com/citations?user=o9RCNZYAAAAJ&amp;hl=en">Dr. Faisal Shafait</a></li>
+                <li><a href="https://scholar.google.com/citations?user=At3HcGMAAAAJ&amp;hl=en">Dr. Momina Moetesum</a></li>
+                <li><a href="https://scholar.google.com/citations?user=JU30hvIAAAAJ&hl=en">Dr. Usman</a></li>
+            </ul>
+
+
+            <h3>Elsewhere</h3>
+
+            <ul>
+                <li><a href="cv.pdf" target="_blank">Full CV</a></li>
+                <li><a href="https://github.com/moiz56">GitHub</a></li>
+                <li><a href="mailto:moizmasood2003@gmail.com">Email</a></li>
+            </ul>
+
+        </aside>
+
+    </div>
+
+
+    <!-- Footer -->
+    <footer id="footer">
+
+        <p>
+            Last updated September 2026.
+            &nbsp;|&nbsp;
+            © Muhammad Moiz
+        </p>
+
+    </footer>
+
+</div>
+
+</body>
+</html>
